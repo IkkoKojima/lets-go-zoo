@@ -20,7 +20,6 @@ export default function VideoCardModal() {
         <div>
             <Helmet
                 meta={[
-                    { property: 'og:title', content: 'Lives:Lives' },
                     { property: 'og:type', content: 'article' },
                     { property: 'og:url', content: currentUrl },
                     { property: 'og:image', content: youtubeThumbneileUrl },
