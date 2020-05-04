@@ -1,4 +1,4 @@
-import { urlToId } from '../src/Video'
+import { urlToId } from '../src/utils/VideoUtils'
 
 describe('urlToId', (): void => {
     test("convert youtube url to id", (): void => {
