@@ -1,6 +1,6 @@
 import React from 'react';
 import YouTube, { Options } from 'react-youtube'
-import { Video } from './Video';
+import { Video } from '../domains/Video';
 import { makeStyles, Theme, createStyles, Paper, Grid, Button } from '@material-ui/core';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
