@@ -2,6 +2,17 @@ import React from 'react';
 import YouTube, { Options } from 'react-youtube'
 import { Video } from '../domains/Video';
 import { makeStyles, Theme, createStyles, Paper, Grid, Button } from '@material-ui/core';
+import {
+    FacebookShareButton,
+    LineShareButton,
+    RedditShareButton,
+    TwitterShareButton,
+    TwitterIcon,
+    LineIcon,
+    FacebookIcon,
+    RedditIcon,
+} from "react-share";
+import { useLocation } from 'react-router-dom';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
     parent: {
@@ -37,6 +48,7 @@ type Props = {
 }
 
 export default function VideoCard(props: Props) {
+    const currentUrl: string = "https://lets-go-zoo.now.sh" + useLocation().pathname
     const classes = useStyle()
     const opts: Options = {
         playerVars: {
@@ -48,13 +60,40 @@ export default function VideoCard(props: Props) {
         },
     };
 
+    function shareButtons() {
+        return (
+            <React.Fragment>
+                <Grid item >
+                    <TwitterShareButton url={currentUrl} >
+                        <TwitterIcon round />
+                    </TwitterShareButton>
+                </Grid>
+                <Grid item >
+                    <FacebookShareButton url={currentUrl} >
+                        <FacebookIcon round />
+                    </FacebookShareButton>
+                </Grid>
+                <Grid item >
+                    <LineShareButton url={currentUrl} >
+                        <LineIcon round />
+                    </LineShareButton>
+                </Grid>
+                <Grid item >
+                    <RedditShareButton url={currentUrl} >
+                        <RedditIcon round />
+                    </RedditShareButton>
+                </Grid>
+            </React.Fragment>
+        )
+    }
+
     function Sidepanel() {
         return (
             <React.Fragment>
                 <Grid className={classes.grid} style={{ height: "40%" }} item><Paper className={classes.content}>ad</Paper></Grid>
                 <Grid className={classes.grid} style={{ height: "20%" }} item><Button variant="contained" className={classes.content}>detail</Button></Grid>
                 <Grid className={classes.grid} style={{ height: "20%" }} item><Button variant="contained" className={classes.content}>donate</Button></Grid>
-                <Grid className={classes.grid} style={{ height: "20%" }} item><Button variant="contained" className={classes.content}>screenshot</Button></Grid>
+                <Grid className={classes.grid} style={{ height: "20%" }} item container>{shareButtons()}</Grid>
             </React.Fragment>
         )
     }

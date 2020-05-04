@@ -22,8 +22,8 @@ export default function Lives() {
                 const youtubeId = urlToId(videoUrl);
                 const youtubeThumbneileUrl = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
                 return (
-                    <Link to={`${url}/${id}`}>
-                        <img src={youtubeThumbneileUrl} />
+                    <Link to={`${url}/${id}`} key={id}>
+                        <img src={youtubeThumbneileUrl} alt={"video" + id} />
                     </Link>
                 )
             })}
