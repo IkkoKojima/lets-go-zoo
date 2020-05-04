@@ -15,20 +15,15 @@ export default function VideoCardModal() {
     const youtubeThumbneileUrl = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
     const video: Video = new Video(youtubeId)
     const videoCard = <VideoCard video={video} />
-    const currentUrl: string = "https://lets-go-zoo.now.sh" + useLocation().pathname
+    const currentUrl: string = "https://liveslives.net" + useLocation().pathname
     return (
         <div>
             <Helmet
-                title={`Lives&Lives`}
                 meta={[
-                    { name: 'twitter:card', content: 'summary_large_image' },
-                    { name: 'twitter:site', content: '@IkkoKojima' },
-                    { name: 'twitter:creator', content: '@IkkoKojima' },
-                    { property: 'og:title', content: 'Lives&Lives' },
-                    { property: 'og:type', content: 'website' },
+                    { property: 'og:title', content: 'Lives:Lives' },
+                    { property: 'og:type', content: 'article' },
                     { property: 'og:url', content: currentUrl },
                     { property: 'og:image', content: youtubeThumbneileUrl },
-                    { property: 'og:description', content: '動物たちのイキイキとした姿をみんなで観察' },
                 ]}
             />
             <SimpleModal content={videoCard} prevPath="/lives" />

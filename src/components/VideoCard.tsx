@@ -48,7 +48,7 @@ type Props = {
 }
 
 export default function VideoCard(props: Props) {
-    const currentUrl: string = "https://lets-go-zoo.now.sh" + useLocation().pathname
+    const currentUrl: string = "https://liveslives.net" + useLocation().pathname
     const classes = useStyle()
     const opts: Options = {
         playerVars: {
