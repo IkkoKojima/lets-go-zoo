@@ -32,7 +32,7 @@ export default function Lives() {
                     const youtubeId = urlToId(videoUrl);
                     const youtubeThumbneileUrl = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`
                     return (
-                        <Grid item key={id} xs={6} sm={3}>
+                        <Grid item key={id} xs={6} sm={3} lg={2}>
                             <Link to={`${url}/${id}`} >
                                 <ImgPanel src={youtubeThumbneileUrl} alt={"video" + id} />
                             </Link>

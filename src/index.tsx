@@ -10,19 +10,22 @@ import {
 import Lives from './components/Lives';
 import Header from './components/Header'
 import 'normalize.css'
+import Background from './components/Background';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route path="/lives">
-          <Lives />
-        </Route>
-      </Switch>
+      <Background>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <App />
+          </Route>
+          <Route path="/lives">
+            <Lives />
+          </Route>
+        </Switch>
+      </Background>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

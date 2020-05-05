@@ -7,7 +7,7 @@ import { IconButton } from '@material-ui/core';
 
 export default function Header() {
     return (
-        <AppBar position="static" style={{ background: "#629a66" }}>
+        <AppBar position="static" style={{ background: "rgba(98, 154, 102,0.8)" }}>
             <Toolbar>
                 <IconButton edge="start" color="inherit" aria-label="menu">
                     <MenuIcon />
