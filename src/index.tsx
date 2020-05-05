@@ -6,22 +6,26 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from "react-router-dom";
 import Lives from './components/Lives';
+import Header from './components/Header'
+import 'normalize.css'
+import Background from './components/Background';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Link to="/lives"><p>Lives</p></Link>
-      <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route path="/lives">
-          <Lives />
-        </Route>
-      </Switch>
+      <Background>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <App />
+          </Route>
+          <Route path="/lives">
+            <Lives />
+          </Route>
+        </Switch>
+      </Background>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
