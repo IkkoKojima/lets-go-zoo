@@ -1,6 +1,6 @@
 import React from 'react'
 import * as THREE from 'three'
-import Globe from '../vanta.globe.min.js'
+import VantaGlobe from 'vanta/dist/vanta.globe.min'
 
 class Background extends React.Component {
     constructor() {
@@ -8,7 +8,7 @@ class Background extends React.Component {
         this.vantaRef = React.createRef()
     }
     componentDidMount() {
-        this.vantaEffect = Globe({
+        this.vantaEffect = VantaGlobe({
             el: this.vantaRef.current,
             THREE: THREE,
             backgroundColor: "rgb(229, 219, 217)",
