@@ -6,14 +6,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from "react-router-dom";
 import Lives from './components/Lives';
+import Header from './components/Header'
+import 'normalize.css'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Link to="/lives"><p>Lives</p></Link>
+      <Header />
       <Switch>
         <Route exact path="/">
           <App />
