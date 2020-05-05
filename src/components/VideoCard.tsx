@@ -1,45 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import YouTube, { Options } from 'react-youtube'
 import { Video } from '../domains/Video';
-import { makeStyles, Theme, createStyles, Paper, Grid, Button } from '@material-ui/core';
+import { makeStyles, Theme, createStyles, Paper, Grid, Button, Snackbar } from '@material-ui/core';
 import {
     FacebookShareButton,
     LineShareButton,
-    RedditShareButton,
     TwitterShareButton,
     TwitterIcon,
     LineIcon,
     FacebookIcon,
-    RedditIcon,
 } from "react-share";
 import { useLocation } from 'react-router-dom';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
+import CopyToClipboard from 'react-copy-to-clipboard'
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
-    parent: {
-        width: "90vw",
+    div: {
+        [theme.breakpoints.down('xs')]: {
+            width: "100vw",
+            height: "62vh",
+        },
+        width: "100vw",
         height: "90vh",
-        background: "black"
+        [theme.breakpoints.up('lg')]: {
+            width: "80vw",
+            height: "100vh",
+        },
+        background: "rgba(0,0,0,0.5)"
     },
     root: {
         height: "100%",
         width: "100%",
-        padding: "10px"
-    },
-    grid: {
-        padding: "5px",
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
     },
     video: {
-        width: "70vw",
-        height: "70vh"
+        width: "100vw",
+        height: "calc(100vw * 0.5625)",
+        [theme.breakpoints.up('lg')]: {
+            width: "80vw",
+            height: "calc(80vw * 0.5625)"
+        },
+        maxHeight: "60vh"
     },
-    content: {
-        height: "100%",
-        width: "100%"
+    button: {
+        width: "33vw",
+        [theme.breakpoints.up('lg')]: {
+            width: "26vw"
+        },
+        height: "10vh"
     }
 }))
 
@@ -48,6 +55,7 @@ type Props = {
 }
 
 export default function VideoCard(props: Props) {
+    const [tooltipOpen, setTooltipOpen] = useState(false)
     const currentUrl: string = "https://liveslives.net" + useLocation().pathname
     const classes = useStyle()
     const opts: Options = {
@@ -60,85 +68,82 @@ export default function VideoCard(props: Props) {
         },
     };
 
-    function shareButtons() {
+    function actionButtons(url: string, size: number) {
         return (
             <React.Fragment>
-                <Grid item >
-                    <TwitterShareButton url={currentUrl} >
-                        <TwitterIcon round />
+                <Grid item>
+                    <Button className={classes.button} variant="contained">donate</Button>
+                </Grid>
+                <Grid item>
+                    <TwitterShareButton url={url} >
+                        <TwitterIcon size={size} />
                     </TwitterShareButton>
                 </Grid>
-                <Grid item >
-                    <FacebookShareButton url={currentUrl} >
-                        <FacebookIcon round />
+                <Grid item>
+                    <FacebookShareButton url={url} >
+                        <FacebookIcon size={size} />
                     </FacebookShareButton>
                 </Grid>
-                <Grid item >
-                    <LineShareButton url={currentUrl} >
-                        <LineIcon round />
+                <Grid item>
+                    <LineShareButton url={url} >
+                        <LineIcon size={size} />
                     </LineShareButton>
                 </Grid>
-                <Grid item >
-                    <RedditShareButton url={currentUrl} >
-                        <RedditIcon round />
-                    </RedditShareButton>
-                </Grid>
-            </React.Fragment>
-        )
-    }
-
-    function Sidepanel() {
-        return (
-            <React.Fragment>
-                <Grid className={classes.grid} style={{ height: "40%" }} item><Paper className={classes.content}>ad</Paper></Grid>
-                <Grid className={classes.grid} style={{ height: "20%" }} item><Button variant="contained" className={classes.content}>detail</Button></Grid>
-                <Grid className={classes.grid} style={{ height: "20%" }} item><Button variant="contained" className={classes.content}>donate</Button></Grid>
-                <Grid className={classes.grid} style={{ height: "20%" }} item container>{shareButtons()}</Grid>
-            </React.Fragment>
-        )
-    }
-
-    function Mainpanel() {
-        return (
-            <React.Fragment>
-                <Grid className={classes.grid} style={{ height: "80%" }} item>
-                    <YouTube
-                        videoId={props.video.id}
-                        opts={opts}
-                        className={classes.video}
+                <Grid item>
+                    <CopyToClipboard text={url} onCopy={() => setTooltipOpen(true)}>
+                        <rect style={{
+                            width: `${size}px`,
+                            height: `${size}px`,
+                            background: "gray",
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}>
+                            <FileCopyIcon style={{ color: "white" }} />
+                        </rect>
+                    </CopyToClipboard>
+                    <Snackbar
+                        anchorOrigin={{ vertical: 'bottom', horizontal: 'right', }}
+                        message="URLのコピーに成功しました"
+                        open={tooltipOpen}
+                        autoHideDuration={2000}
+                        onClose={() => setTooltipOpen(false)}
                     />
                 </Grid>
-                <Grid className={classes.grid} style={{ height: "20%" }} item>
-                    <Paper className={classes.content}>comment</Paper>
-                </Grid>
             </React.Fragment>
         )
     }
+
     return (
-        <div className={classes.parent}>
+        <div className={classes.div}>
             <Grid
                 className={classes.root}
                 container
+                direction="column"
+                justify="center"
+                alignItems="center"
+                spacing={1}
             >
-                <Grid
-                    item
-                    xs={10}
-                    container
-                    direction="column"
-                    justify="space-evenly"
-                    alignItems="stretch"
-                >
-                    <Mainpanel />
+                <Grid item>
+                    <YouTube
+                        className={classes.video}
+                        videoId={props.video.id}
+                        opts={opts}
+                    />
                 </Grid>
-                <Grid
-                    item
-                    xs={2}
-                    container
-                    direction="column"
-                    justify="space-evenly"
-                    alignItems="stretch"
-                >
-                    <Sidepanel />
+                <Grid item container spacing={2}>
+                    <Grid item xs={8}>
+                        <Paper style={{
+                            width: "100%",
+                            height: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center"
+                        }}>details + ad</Paper>
+                    </Grid>
+                    <Grid item xs={4} container spacing={1} justify="center">
+                        {actionButtons(currentUrl, 45)}
+                    </Grid>
                 </Grid>
             </Grid>
         </div>
