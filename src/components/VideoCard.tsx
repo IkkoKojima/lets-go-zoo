@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import YouTube, { Options } from 'react-youtube'
 import { Video } from '../domains/Video';
-import { makeStyles, Theme, createStyles, Paper, Grid, Snackbar } from '@material-ui/core';
+import { makeStyles, Theme, createStyles, Paper, Grid, Button, Snackbar } from '@material-ui/core';
 import {
     FacebookShareButton,
     LineShareButton,
@@ -10,10 +10,9 @@ import {
     LineIcon,
     FacebookIcon,
 } from "react-share";
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import CopyToClipboard from 'react-copy-to-clipboard'
-import ButtonWithImg from './ButtonWithImg';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
     div: {
@@ -42,6 +41,13 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
         },
         maxHeight: "60vh"
     },
+    button: {
+        width: "33vw",
+        [theme.breakpoints.up('lg')]: {
+            width: "26vw"
+        },
+        height: "10vh"
+    }
 }))
 
 type Props = {
@@ -61,19 +67,12 @@ export default function VideoCard(props: Props) {
             mute: 1 //TODO:ミュートをボタンで書き換えられるように変更
         },
     };
-    const image = {
-        url: "https://source.unsplash.com/vUyQSMnQfbA/640x430",
-        title: "コロナ禍でヤバイ動物を一緒に助けよう",
-        style: { width: "26vw", height: "10vh" }
-    }
 
     function actionButtons(url: string, size: number) {
         return (
             <React.Fragment>
                 <Grid item>
-                    <Link to="/rescue">
-                        <ButtonWithImg image={image} />
-                    </Link>
+                    <Button className={classes.button} variant="contained">donate</Button>
                 </Grid>
                 <Grid item>
                     <TwitterShareButton url={url} >
@@ -92,7 +91,7 @@ export default function VideoCard(props: Props) {
                 </Grid>
                 <Grid item>
                     <CopyToClipboard text={url} onCopy={() => setTooltipOpen(true)}>
-                        <div style={{
+                        <rect style={{
                             width: `${size}px`,
                             height: `${size}px`,
                             background: "gray",
@@ -101,7 +100,7 @@ export default function VideoCard(props: Props) {
                             justifyContent: 'center',
                         }}>
                             <FileCopyIcon style={{ color: "white" }} />
-                        </div>
+                        </rect>
                     </CopyToClipboard>
                     <Snackbar
                         anchorOrigin={{ vertical: 'bottom', horizontal: 'right', }}
