@@ -42,13 +42,13 @@ export default function CourceChoice() {
         style: { width: "40vw", height: "8vh" }
     }
 
-    const stripePromise: Promise<Stripe | null> = loadStripe(process.env.PK ? process.env.PK : "");//IDを書き換えてください
+    const stripePromise: Promise<Stripe | null> = loadStripe("pk_live_Oxz7C2y72wh28u3p4ti6rd0U00Q9wmXnVW");//IDを書き換えてください
 
     const handleClick5482 =
         async (event: any) => {
             const stripe = await stripePromise
             await stripe?.redirectToCheckout({
-                items: [{ sku: process.env.SKU_5482, quantity: 1 }],
+                items: [{ sku: "sku_HEGqv5OXgWplIL", quantity: 1 }],
                 successUrl: 'https://liveslives.net/rescue',
                 cancelUrl: 'https://liveslives.net/rescue',
             }).catch(err => console.log(err.message))//エラーはとりあえずコンソールに出力する
@@ -58,7 +58,7 @@ export default function CourceChoice() {
         async (event: any) => {
             const stripe = await stripePromise
             await stripe?.redirectToCheckout({
-                items: [{ sku: process.env.SKU_843, quantity: 1 }],
+                items: [{ sku: "sku_HEGqDqUZ5N5GtV", quantity: 1 }],
                 successUrl: 'https://liveslives.net/rescue',
                 cancelUrl: 'https://liveslives.net/rescue',
             }).catch(err => console.log(err.message))//エラーはとりあえずコンソールに出力する
@@ -68,7 +68,7 @@ export default function CourceChoice() {
         async (event: any) => {
             const stripe = await stripePromise
             await stripe?.redirectToCheckout({
-                items: [{ sku: process.env.SKU_110, quantity: 1 }],
+                items: [{ sku: "sku_HEGoJeBujGcMj0", quantity: 1 }],
                 successUrl: 'https://liveslives.net/rescue',
                 cancelUrl: 'https://liveslives.net/rescue',
             }).catch(err => console.log(err.message))//エラーはとりあえずコンソールに出力する
