@@ -16,7 +16,7 @@ type Props = {
     content: React.ReactNode
 }
 
-export default function SimpleModal(props: Props) {
+export default function StandaloneModal(props: Props) {
     const history = useHistory()
     const classes = useStyle()
     const [open, setOpen] = React.useState(true);

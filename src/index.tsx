@@ -11,6 +11,7 @@ import Lives from './components/Lives';
 import Header from './components/Header'
 import 'normalize.css'
 import Background from './components/Background';
+import CourceChoice from './components/CourceChoice';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +24,9 @@ ReactDOM.render(
           </Route>
           <Route path="/lives">
             <Lives />
+          </Route>
+          <Route path="/rescue">
+            <CourceChoice />
           </Route>
         </Switch>
       </Background>

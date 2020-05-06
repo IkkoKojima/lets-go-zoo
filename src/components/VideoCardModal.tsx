@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import SimpleModal from './SimpleModal';
+import StandaloneModal from './StandaloneModal';
 import { Video } from '../domains/Video';
 import VideoCard from './VideoCard';
 import { fetchVideoUrlFromId } from '../repositories/fromJson';
@@ -25,7 +25,7 @@ export default function VideoCardModal() {
                     { property: 'og:image', content: youtubeThumbneileUrl },
                 ]}
             />
-            <SimpleModal content={videoCard} prevPath="/lives" />
+            <StandaloneModal content={videoCard} prevPath="/lives" />
         </div>
     )
 }
