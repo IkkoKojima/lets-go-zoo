@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import YouTube, { Options } from 'react-youtube'
 import { Video } from '../domains/Video';
-import { makeStyles, Theme, createStyles, Paper, Grid, Snackbar } from '@material-ui/core';
+import { makeStyles, Theme, createStyles, Grid, Snackbar } from '@material-ui/core';
 import {
     FacebookShareButton,
     LineShareButton,
@@ -14,6 +14,8 @@ import { useLocation, Link } from 'react-router-dom';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import CopyToClipboard from 'react-copy-to-clipboard'
 import ButtonWithImg from './ButtonWithImg';
+import Carousel from 'react-material-ui-carousel';
+import { DetailItem } from './DetailItem';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
     div: {
@@ -41,6 +43,13 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
             height: "calc(80vw * 0.5625)"
         },
         maxHeight: "60vh"
+    },
+    carousel: {
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
     },
 }))
 
@@ -134,13 +143,12 @@ export default function VideoCard(props: Props) {
                 </Grid>
                 <Grid item container spacing={2}>
                     <Grid item xs={8}>
-                        <Paper style={{
-                            width: "100%",
-                            height: "100%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center"
-                        }}>details + ad</Paper>
+                        <div className={classes.carousel}>
+                            <Carousel indicators={false} timeout={2000} className={classes.carousel}>
+                                <DetailItem imgUrl="https://source.unsplash.com/1600x900/?blue" imgAlt="blue" text="ミズクラゲ（水海月）は、鉢虫綱・旗口クラゲ目（ミズクラゲ目）・ミズクラゲ科に属するクラゲの一種。日本近海でも最も普通に観察できるクラゲである。傘に透けて見える胃腔、生殖腺が4つあることから、ヨツメクラゲとも呼ばれる。" />
+                                <DetailItem imgUrl="https://source.unsplash.com/1600x900/?red" imgAlt="red" text="餌となるのは主に動物性プランクトンで、時に仔魚を捕食する。遊泳運動は捕食活動も兼ねており、傘を開閉することで縁辺部の触手の間で海水が濾過され、そこに浮遊する動物プランクトンが触手に捕らえられる。" />
+                            </Carousel>
+                        </div>
                     </Grid>
                     <Grid item xs={4} container spacing={1} justify="center">
                         {actionButtons(currentUrl, 45)}
