@@ -48,7 +48,7 @@ export default function CourceChoice() {
         async (event: any) => {
             const stripe = await stripePromise
             await stripe?.redirectToCheckout({
-                items: [{ sku: "sku_HEGqv5OXgWplIL", quantity: 1 }],
+                items: [{ sku: "sku_HEGoJeBujGcMj0", quantity: 1 }],
                 successUrl: 'https://liveslives.net/rescue',
                 cancelUrl: 'https://liveslives.net/rescue',
             }).catch(err => console.log(err.message))//エラーはとりあえずコンソールに出力する
@@ -68,7 +68,7 @@ export default function CourceChoice() {
         async (event: any) => {
             const stripe = await stripePromise
             await stripe?.redirectToCheckout({
-                items: [{ sku: "sku_HEGoJeBujGcMj0", quantity: 1 }],
+                items: [{ sku: "sku_HEGqv5OXgWplIL", quantity: 1 }],
                 successUrl: 'https://liveslives.net/rescue',
                 cancelUrl: 'https://liveslives.net/rescue',
             }).catch(err => console.log(err.message))//エラーはとりあえずコンソールに出力する
