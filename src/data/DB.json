@@ -1,48 +1,22 @@
-{
-    "ids": [
-        "xxxxxxxxxx",
-        "yyyyyyyyyy"
-    ],
-    "video_urls": [
-        {
-            "id": "xxxxxxxxxx",
-            "video_url": "https://youtu.be/gdJjc6l6iII"
-        },
-        {
-            "id": "yyyyyyyyyy",
-            "video_url": "https://youtu.be/VReCpkav3RY"
-        }
-    ],
-    "tips": [
-        {
-            "id": "xxxxxxxxxx",
-            "tip": [
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?jellyfish",
-                    "text": "ミズクラゲ（水海月）は、鉢虫綱・旗口クラゲ目（ミズクラゲ目）・ミズクラゲ科に属するクラゲの一種。日本近海でも最も普通に観察できるクラゲである。傘に透けて見える胃腔、生殖腺が4つあることから、ヨツメクラゲとも呼ばれる。"
-                },
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?sea",
-                    "text": "餌となるのは主に動物性プランクトンで、時に仔魚を捕食する。遊泳運動は捕食活動も兼ねており、傘を開閉することで縁辺部の触手の間で海水が濾過され、そこに浮遊する動物プランクトンが触手に捕らえられる。"
-                }
-            ]
-        },
-        {
-            "id": "yyyyyyyyyy",
-            "tip": [
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?turtle",
-                    "text": "採餌は海中で行い、海草、海綿動物、クラゲ、魚類、甲殻類などを食べる。"
-                },
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?turtlr,egg",
-                    "text": "産卵の際、メスは砂浜に上陸し、潮が満ちてこないほどの高台に穴を掘ってピンポン玉ほどの大きさの卵を一度に100個ほど産み落とす。"
-                },
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?turtlr,baby",
-                    "text": "巣穴から脱出直後の子ガメにはフレンジー[3]とよばれる特殊な興奮期があり、子ガメはおよそ丸１日寝ずに泳ぎ続けることができる。"
-                }
-            ]
-        }
-    ]
-}
+[
+  {
+    "id": "51470941-ce07-4b05-9ce5-a1b8c62d8fac",
+    "video_url": "https://www.youtube.com/watch?v=zJ7hUvU-d2Q",
+    "tip1_txt": "ジンベエザメ：成長すると10〜12mになる魚類の中の最大種。模様が夏着の甚平に似ていることからジンベエと名付けられたとされている。食事の際は、動物プランクトン等の小さい餌を、100リットルの海水と一緒に吸い込む！",
+    "tip1_img": "https://churaumi.okinawa/userfiles/fish_images/jinbee.JPG",
+    "tip2_txt": "オニイトマキエイ：横幅は最大で9mにも成長すると言われているトビエイのなかま。ときおり、海面からジャンプすることもある活発な性格だが、何のためにこれをするかはいまだ知られていないという...",
+    "tip2_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Manta_birostris-Thailand4.jpg/300px-Manta_birostris-Thailand4.jpg",
+    "tip3_txt": "ジョージア水族館：アメリカでナンバーワンの巨大水族館。2005年に作られた比較的新しい水族館である。",
+    "tip3_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Georgia_Aquarium_Jan_2006.jpg/300px-Georgia_Aquarium_Jan_2006.jpg"
+  },
+  {
+    "id": "8f8ba8b6-8cb1-4353-a97a-d480e6b36666",
+    "video_url": "https://www.youtube.com/watch?v=t-5K9wOEwAU",
+    "tip1_txt": "チンアナゴ：顔つきがイヌのチンに似ていることから名付けられた。サンゴ礁の潮通しのよい砂底に群れをなして生息する。頭を潮の流れの方に向けて、流れてくる動物プランクトンを食べている。",
+    "tip1_img": "https://churaumi.okinawa/userfiles/fish_images/sanngogyo/chinanagoyoko-resize_1.jpg",
+    "tip2_txt": "チン：狆（ちん）は、日本原産の愛玩犬の1品種。名称の由来は「ちいさいいぬ」が「ちいさいぬ」、「ちいぬ」、「ちぬ」とだんだんつまっていき「ちん」になったといわれている。",
+    "tip2_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Sachi.jpg/220px-Sachi.jpg",
+    "tip3_txt": "",
+    "tip3_img": ""
+  }
+]
