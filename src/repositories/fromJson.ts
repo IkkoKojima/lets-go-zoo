@@ -13,3 +13,13 @@ export function fetchVideoUrlFromId(id: string) {
     }
     throw new Error("video not found from id.")
 }
+
+export function fetchTipsFromId(id: string) {
+    const tips_pair = json.tips
+    for (let tips of tips_pair) {
+        if (id === tips.id) {
+            return tips.tip
+        }
+    }
+    throw new Error("tips not found from id.")
+}

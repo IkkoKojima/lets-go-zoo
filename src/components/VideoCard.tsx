@@ -16,6 +16,7 @@ import CopyToClipboard from 'react-copy-to-clipboard'
 import ButtonWithImg from './ButtonWithImg';
 import Carousel from 'react-material-ui-carousel';
 import { DetailItem } from './DetailItem';
+import { Tip } from '../domains/Tip';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
     div: {
@@ -55,9 +56,11 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
 
 type Props = {
     video: Video
+    tips: Tip[]
 }
 
 export default function VideoCard(props: Props) {
+
     const [tooltipOpen, setTooltipOpen] = useState(false)
     const currentUrl: string = "https://liveslives.net" + useLocation().pathname
     const classes = useStyle()
@@ -145,8 +148,9 @@ export default function VideoCard(props: Props) {
                     <Grid item xs={8}>
                         <div className={classes.carousel}>
                             <Carousel indicators={false} timeout={2000} className={classes.carousel}>
-                                <DetailItem imgUrl="https://source.unsplash.com/1600x900/?blue" imgAlt="blue" text="ミズクラゲ（水海月）は、鉢虫綱・旗口クラゲ目（ミズクラゲ目）・ミズクラゲ科に属するクラゲの一種。日本近海でも最も普通に観察できるクラゲである。傘に透けて見える胃腔、生殖腺が4つあることから、ヨツメクラゲとも呼ばれる。" />
-                                <DetailItem imgUrl="https://source.unsplash.com/1600x900/?red" imgAlt="red" text="餌となるのは主に動物性プランクトンで、時に仔魚を捕食する。遊泳運動は捕食活動も兼ねており、傘を開閉することで縁辺部の触手の間で海水が濾過され、そこに浮遊する動物プランクトンが触手に捕らえられる。" />
+                                {props.tips.map(tip =>
+                                    <DetailItem key={tip.img_url} imgUrl={tip.img_url} imgAlt={tip.img_url} text={tip.text} />
+                                )}
                             </Carousel>
                         </div>
                     </Grid>

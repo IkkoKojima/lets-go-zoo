@@ -12,5 +12,37 @@
             "id": "yyyyyyyyyy",
             "video_url": "https://youtu.be/VReCpkav3RY"
         }
+    ],
+    "tips": [
+        {
+            "id": "xxxxxxxxxx",
+            "tip": [
+                {
+                    "img_url": "https://source.unsplash.com/1600x900/?jellyfish",
+                    "text": "ミズクラゲ（水海月）は、鉢虫綱・旗口クラゲ目（ミズクラゲ目）・ミズクラゲ科に属するクラゲの一種。日本近海でも最も普通に観察できるクラゲである。傘に透けて見える胃腔、生殖腺が4つあることから、ヨツメクラゲとも呼ばれる。"
+                },
+                {
+                    "img_url": "https://source.unsplash.com/1600x900/?sea",
+                    "text": "餌となるのは主に動物性プランクトンで、時に仔魚を捕食する。遊泳運動は捕食活動も兼ねており、傘を開閉することで縁辺部の触手の間で海水が濾過され、そこに浮遊する動物プランクトンが触手に捕らえられる。"
+                }
+            ]
+        },
+        {
+            "id": "yyyyyyyyyy",
+            "tip": [
+                {
+                    "img_url": "https://source.unsplash.com/1600x900/?turtle",
+                    "text": "採餌は海中で行い、海草、海綿動物、クラゲ、魚類、甲殻類などを食べる。"
+                },
+                {
+                    "img_url": "https://source.unsplash.com/1600x900/?turtlr,egg",
+                    "text": "産卵の際、メスは砂浜に上陸し、潮が満ちてこないほどの高台に穴を掘ってピンポン玉ほどの大きさの卵を一度に100個ほど産み落とす。"
+                },
+                {
+                    "img_url": "https://source.unsplash.com/1600x900/?turtlr,baby",
+                    "text": "巣穴から脱出直後の子ガメにはフレンジー[3]とよばれる特殊な興奮期があり、子ガメはおよそ丸１日寝ずに泳ぎ続けることができる。"
+                }
+            ]
+        }
     ]
 }
