@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import YouTube, { Options } from 'react-youtube'
 import { Video } from '../domains/Video';
-import { makeStyles, Theme, createStyles, Paper, Grid, Snackbar } from '@material-ui/core';
+import { makeStyles, Theme, createStyles, Grid, Snackbar } from '@material-ui/core';
 import {
     FacebookShareButton,
     LineShareButton,
@@ -14,6 +14,9 @@ import { useLocation, Link } from 'react-router-dom';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import CopyToClipboard from 'react-copy-to-clipboard'
 import ButtonWithImg from './ButtonWithImg';
+import Carousel from 'react-material-ui-carousel';
+import { DetailItem } from './DetailItem';
+import { Tip } from '../domains/Tip';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
     div: {
@@ -42,13 +45,22 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
         },
         maxHeight: "60vh"
     },
+    carousel: {
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+    },
 }))
 
 type Props = {
     video: Video
+    tips: Tip[]
 }
 
 export default function VideoCard(props: Props) {
+
     const [tooltipOpen, setTooltipOpen] = useState(false)
     const currentUrl: string = "https://liveslives.net" + useLocation().pathname
     const classes = useStyle()
@@ -134,13 +146,13 @@ export default function VideoCard(props: Props) {
                 </Grid>
                 <Grid item container spacing={2}>
                     <Grid item xs={8}>
-                        <Paper style={{
-                            width: "100%",
-                            height: "100%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center"
-                        }}>details + ad</Paper>
+                        <div className={classes.carousel}>
+                            <Carousel indicators={false} timeout={2000} className={classes.carousel}>
+                                {props.tips.map(tip =>
+                                    <DetailItem key={tip.img_url} imgUrl={tip.img_url} imgAlt={tip.img_url} text={tip.text} />
+                                )}
+                            </Carousel>
+                        </div>
                     </Grid>
                     <Grid item xs={4} container spacing={1} justify="center">
                         {actionButtons(currentUrl, 45)}
