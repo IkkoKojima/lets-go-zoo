@@ -1,12 +1,20 @@
 import React from 'react';
 import { Redirect, Switch, Route } from 'react-router-dom';
 import Lives from './Lives';
-import BackgroungAnimation from './BackgroundAnimation';
 import Menus from './Menus';
+import { makeStyles, Theme, createStyles } from '@material-ui/core';
+import ParticleBG from './ParticleBG';
+
+const useStyle = makeStyles((theme: Theme) => createStyles({
+  div: {
+    overflow: "hidden"
+  },
+}))
 
 function App() {
+  const classes = useStyle()
   return (
-    <div>
+    <div className={classes.div}>
       <Menus />
       <Switch>
         <Route path="/lives">
@@ -16,7 +24,7 @@ function App() {
           <Redirect to="/lives" />
         </Route>
       </Switch>
-      <BackgroungAnimation />
+      <ParticleBG />
     </div>
   );
 }

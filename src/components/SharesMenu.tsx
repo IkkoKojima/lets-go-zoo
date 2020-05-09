@@ -75,7 +75,7 @@ export default function SharesMenu() {
                 </MenuItem>
             </Menu>
             <Snackbar
-                anchorOrigin={{ vertical: 'top', horizontal: 'right', }}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right', }}
                 message="URLのコピーに成功しました"
                 open={tooltipOpen}
                 autoHideDuration={2000}

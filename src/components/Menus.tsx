@@ -6,8 +6,8 @@ import BgmMenu from './BgmMenu';
 const useStyle = makeStyles((theme: Theme) => createStyles({
     menu: {
         position: "fixed",
-        bottom: "30vh",
-        right: "2vw",
+        bottom: "30px",
+        right: "20px",
         zIndex: 2,
     },
 }))
