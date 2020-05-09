@@ -1,48 +1,102 @@
-{
-    "ids": [
-        "xxxxxxxxxx",
-        "yyyyyyyyyy"
-    ],
-    "video_urls": [
-        {
-            "id": "xxxxxxxxxx",
-            "video_url": "https://youtu.be/gdJjc6l6iII"
-        },
-        {
-            "id": "yyyyyyyyyy",
-            "video_url": "https://youtu.be/VReCpkav3RY"
-        }
-    ],
-    "tips": [
-        {
-            "id": "xxxxxxxxxx",
-            "tip": [
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?jellyfish",
-                    "text": "ミズクラゲ（水海月）は、鉢虫綱・旗口クラゲ目（ミズクラゲ目）・ミズクラゲ科に属するクラゲの一種。日本近海でも最も普通に観察できるクラゲである。傘に透けて見える胃腔、生殖腺が4つあることから、ヨツメクラゲとも呼ばれる。"
-                },
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?sea",
-                    "text": "餌となるのは主に動物性プランクトンで、時に仔魚を捕食する。遊泳運動は捕食活動も兼ねており、傘を開閉することで縁辺部の触手の間で海水が濾過され、そこに浮遊する動物プランクトンが触手に捕らえられる。"
-                }
-            ]
-        },
-        {
-            "id": "yyyyyyyyyy",
-            "tip": [
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?turtle",
-                    "text": "採餌は海中で行い、海草、海綿動物、クラゲ、魚類、甲殻類などを食べる。"
-                },
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?turtlr,egg",
-                    "text": "産卵の際、メスは砂浜に上陸し、潮が満ちてこないほどの高台に穴を掘ってピンポン玉ほどの大きさの卵を一度に100個ほど産み落とす。"
-                },
-                {
-                    "img_url": "https://source.unsplash.com/1600x900/?turtlr,baby",
-                    "text": "巣穴から脱出直後の子ガメにはフレンジー[3]とよばれる特殊な興奮期があり、子ガメはおよそ丸１日寝ずに泳ぎ続けることができる。"
-                }
-            ]
-        }
-    ]
-}
+[
+  {
+    "id": "51470941-ce07-4b05-9ce5-a1b8c62d8fac",
+    "video_url": "https://www.youtube.com/watch?v=zJ7hUvU-d2Q",
+    "tip1_txt": "【ジンベエザメ】成長すると10〜12mになる魚類の中の最大種。模様が夏着の甚平に似ていることからジンベエと名付けられたとされている。食事の際は、動物プランクトン等の小さい餌を、100リットルの海水と一緒に吸い込む！",
+    "tip2_txt": "【オニイトマキエイ】横幅は最大で9mにも成長すると言われているトビエイのなかま。ときおり、海面からジャンプすることもある活発な性格だが、何のためにこれをするかはいまだ知られていないという...",
+    "tip3_txt": "【ジョージア水族館】アメリカでナンバーワンの巨大水族館。2005年に作られた比較的新しい水族館である。",
+    "tip1_img": "https://churaumi.okinawa/userfiles/fish_images/jinbee.JPG",
+    "tip2_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Manta_birostris-Thailand4.jpg/300px-Manta_birostris-Thailand4.jpg",
+    "tip3_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Georgia_Aquarium_Jan_2006.jpg/300px-Georgia_Aquarium_Jan_2006.jpg"
+  },
+  {
+    "id": "8f8ba8b6-8cb1-4353-a97a-d480e6b36666",
+    "video_url": "https://www.youtube.com/watch?v=t-5K9wOEwAU",
+    "tip1_txt": "【チンアナゴ】顔つきがイヌのチンに似ていることから名付けられた。サンゴ礁の潮通しのよい砂底に群れをなして生息する。頭を潮の流れの方に向けて、流れてくる動物プランクトンを食べている。",
+    "tip2_txt": "【チン】狆（ちん）は、日本原産の愛玩犬の1品種。名称の由来は「ちいさいいぬ」が「ちいさいぬ」、「ちいぬ」、「ちぬ」とだんだんつまっていき「ちん」になったといわれている。",
+    "tip3_txt": "",
+    "tip1_img": "https://churaumi.okinawa/userfiles/fish_images/sanngogyo/chinanagoyoko-resize_1.jpg",
+    "tip2_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Sachi.jpg/220px-Sachi.jpg",
+    "tip3_img": ""
+  },
+  {
+    "id": "4fa97461-81d2-46e0-ac84-92ef10c14ff9",
+    "video_url": "https://www.youtube.com/watch?v=HqErSOEjHe4",
+    "tip1_txt": "【オオメジロザメ】最大3.4mまで成長する。淡水への適応力があり、川を3500キロメートルもさかのぼった例もあるという。人を襲った記録も極めて多く、気性も荒いことから、ホホジロザメやイタチザメ、ヨゴレなどと並ぶ最も危険なサメである。",
+    "tip2_txt": "【カマストガリザメ】世界中の熱帯から温帯の海い広く生息し、河口や湾内などの浅い海域でも見られる。捕食のために小魚の群れに突っ込み、水面からから跳び出して3、4回転することもあるという。",
+    "tip3_txt": "【サメの生殖】魚類の中では珍しく、オスとメスが互いの生殖器を合わせる形で交尾する。一部のサメでは子宮内で孵化した仔魚が、後から産まれてくる卵や他の仔魚を食べて育つ共食いを起こす。",
+    "tip1_img": "https://churaumi.okinawa/userfiles/fish_images/samesuisou/07-6001oomejiro03.jpg",
+    "tip2_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Carcharhinus_limbatus_-_Caraibische_zwartpunthaai.jpg/500px-Carcharhinus_limbatus_-_Caraibische_zwartpunthaai.jpg",
+    "tip3_img": "https://stat.ameba.jp/user_images/89/d2/10005214151.jpg"
+  },
+  {
+    "id": "07a675ab-f38f-46c7-9f11-3aadab175257",
+    "video_url": "https://www.youtube.com/watch?v=SmfbP17xyqQ",
+    "tip1_txt": "【タコクラゲ】タコのように8本の足があり、傘には水玉模様があるのが特徴。傘の大きさは10から20センチメートルになる。",
+    "tip2_txt": "【アカクラゲ】触手が長く、2メートルほどになる個体もある。美しいが強い毒を持つため、海で見ても近づいてはいけない。",
+    "tip3_txt": "【ミズクラゲ】傘の真ん中にあるクローバーのような模様の器官は実は胃で、捕食の後に観察すると、プランクトンの色であるオレンジに染まった姿を見ることができる。",
+    "tip1_img": "https://lh3.googleusercontent.com/proxy/iIIe6pnHJCzX-TPz1U7wqqRQQBoF2rf-zqf71q-EXJoCcnhkvvxeAyTjnKmBZD_oQtiDijPVHBwdNS_dH1gSnaF3VxYycgEBCWz6KkQJ2FaokF4",
+    "tip2_img": "https://www.chowari.jp/sp/book/img/949_5.jpg",
+    "tip3_img": "https://www.sumida-aquarium.com/column/wp-content/uploads/2017/08/kurage05.jpg"
+  },
+  {
+    "id": "fe5a775b-3d87-400f-87ae-dd33faa8b480",
+    "video_url": "https://www.youtube.com/watch?v=dQfrTmubDzM",
+    "tip1_txt": "【カクレクマノミ】イソギンチャクを隠れ家として利用するだけでなく、彼らの食べ残しをも餌としている。成長すると体長は8センチメートルほどになる。",
+    "tip2_txt": "【センジュイソギンチャク】小魚やカニなどを捕らえて捕食するだけでなく、光合成も行う。クマノミが体の周りを動き回ることにより、体内の老廃物の排出が促進されるという。",
+    "tip3_txt": "",
+    "tip1_img": "https://zukan.com/media/leaf/original/031898.jpg?width=832&height=624&type=resize",
+    "tip2_img": "https://lh3.googleusercontent.com/proxy/FJ9HmNWW-I6rDMmup_W96BQPzpgBC-svjWxJPciXRRotyDayfCnCJYdmAKf5THniTjMftVW1tSuft8VK2iTJ6nzvI7oExAmE5gEyQCBQg0Uf1R_GXspJD-uieJq5P8u5nh57D3gv564",
+    "tip3_img": ""
+  },
+  {
+    "id": "7903c49e-6660-40bc-b7b0-40d613ba70be",
+    "video_url": "https://www.youtube.com/watch?v=znv6TtVlCUs",
+    "tip1_txt": "【アオウミガメ】ダイビングで最も出会いやすい種類のウミガメ。海藻を主食としているが、クラゲを食べることもある。2から4年に一度、自らが生まれた砂浜に戻り、穴を掘って100~200個の卵を生む。",
+    "tip2_txt": "【アカウミガメ】外洋に住んでいるため、なかなか出会うことはできない。貝やヤドカリなどの硬いものを好んで食す。顎が発達しているため、頭が大きい。2012年現在で実年齢が明確な最長寿個体は62歳。",
+    "tip3_txt": "【ウミガメの子供】砂浜で孵化したウミガメの子供は海へ旅立つが、その多くが魚類や海鳥に捕食される。孵化直後の子供はフレンジーと呼ばれる特殊な興奮状態にあり、丸一日寝ずに泳ぐことができる。",
+    "tip1_img": "https://churaumi.okinawa/userfiles/fish_images/aoumigamenozoki.jpg",
+    "tip2_img": "https://churaumi.okinawa/userfiles/fish_images/akaumigame.jpg",
+    "tip3_img": "https://d2dcan0armyq93.cloudfront.net/photo/odai/600/c77496deaabaabe7559bf955c03ce0f6_600.jpg"
+  },
+  {
+    "id": "385570ba-e998-492e-b4a6-2828ce31dc3e",
+    "video_url": "https://www.youtube.com/watch?v=PXTf8PwYqe0",
+    "tip1_txt": "【ウコンハネガイ】外套膜のフチに、光を反射させる細胞があるため、点滅するように光って見える。光る理由は、捕食者への威嚇もしくは獲物を誘うためとの見方が有力。",
+    "tip2_txt": "",
+    "tip3_txt": "",
+    "tip1_img": "https://churaumi.okinawa/userfiles/fish_images/sanngo_musekitsui/ukonhanegai_2.jpg",
+    "tip2_img": "",
+    "tip3_img": ""
+  },
+  {
+    "id": "cba660ea-8bcd-43f1-affa-bf9b1691a259",
+    "video_url": "https://www.youtube.com/watch?v=nNu7_qOD3-k",
+    "tip1_txt": "【ヘコアユ】逆立ちして泳ぐ奇妙な魚。薄く細長い体は硬い甲板に覆われており、硬すぎて体が曲がらないため、小さなヒレを動かして泳ぐ。",
+    "tip2_txt": "",
+    "tip3_txt": "",
+    "tip1_img": "https://zukan.com/media/leaf/original/029880.jpg?width=832&height=624&type=resize",
+    "tip2_img": "",
+    "tip3_img": ""
+  },
+  {
+    "id": "12d35813-e0c3-4e49-a255-74ddc0037aa4",
+    "video_url": "https://www.youtube.com/watch?v=nMAzchVWTis",
+    "tip1_txt": "【モンガラカワハギ】白い斑点や黄色いクチバシが特徴的な魚。日本海にも出現することがあるが、琉球列島や小笠原諸島ではよく見られる。鋭い歯で甲殻類や小魚を捕食する。",
+    "tip2_txt": "【ツノダシ】突き出した口と、長く伸びる背ビレが特徴。観賞魚として人気が高いが、実は食用としても美味である。",
+    "tip3_txt": "【ツバメウオ】幼魚は枯れ葉にカモフレージュしながら、漂流移動をする。数十センチほどの体長だが、大きいものだと1メートルに達するものもいるという。味は美味。",
+    "tip1_img": "https://zukan.com/media/leaf/original/014862_1.jpg?width=832&height=624&type=resize",
+    "tip2_img": "https://zukan.com/media/leaf/original/010295.jpg?width=832&height=624&type=resize",
+    "tip3_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/%E3%83%84%E3%83%90%E3%83%A1%E3%82%A6%E3%82%AA.jpg/440px-%E3%83%84%E3%83%90%E3%83%A1%E3%82%A6%E3%82%AA.jpg"
+  },
+  {
+    "id": "5be64e45-4602-4f68-b955-7907f86b8487",
+    "video_url": "https://www.youtube.com/watch?v=GOsfvjwwe2E",
+    "tip1_txt": "【バンドウイルカ】口角が上がっているため、角度によっては顔つきが笑顔のように見える。瞬間的には70km/h近い猛スピードを出す個体もいると考えられているほど、早く泳ぐことが得意である。",
+    "tip2_txt": "【マダライルカ】遠洋にいるものより、沿岸に棲息する個体の方が大きく、模様の斑（まだら）がはっきりする。キハダマグロと一緒に泳ぐことが多いが、これが原因で混獲されてしまい、絶滅が懸念されたことがある。",
+    "tip3_txt": "",
+    "tip1_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Tursiops_truncatus_01-cropped.jpg/360px-Tursiops_truncatus_01-cropped.jpg",
+    "tip2_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/PanTropSpDolpor.jpg/500px-PanTropSpDolpor.jpg",
+    "tip3_img": ""
+  }
+]

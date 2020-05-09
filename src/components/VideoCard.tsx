@@ -67,10 +67,10 @@ export default function VideoCard(props: Props) {
     const opts: Options = {
         playerVars: {
             autoplay: 1,
-            controls: 0,
-            disablekb: 1,
+            controls: 1,
+            disablekb: 0,
             loop: 1,
-            mute: 1 //TODO:ミュートをボタンで書き換えられるように変更
+            mute: 0 //TODO:ミュートをボタンで書き換えられるように変更
         },
     };
     const image = {
@@ -147,7 +147,7 @@ export default function VideoCard(props: Props) {
                 <Grid item container spacing={2}>
                     <Grid item xs={8}>
                         <div className={classes.carousel}>
-                            <Carousel indicators={false} timeout={2000} className={classes.carousel}>
+                            <Carousel indicators={false} timeout={2000} interval={10000} className={classes.carousel}>
                                 {props.tips.map(tip =>
                                     <DetailItem key={tip.img_url} imgUrl={tip.img_url} imgAlt={tip.img_url} text={tip.text} />
                                 )}
