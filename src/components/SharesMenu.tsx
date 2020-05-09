@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
-import { Menu, MenuItem, makeStyles, Theme, createStyles, Fab, Snackbar, Typography } from '@material-ui/core';
+import { Menu, MenuItem, makeStyles, Theme, createStyles, Fab, Snackbar, Typography, Button } from '@material-ui/core';
 import ShareIcon from '@material-ui/icons/Share';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import RedditIcon from '@material-ui/icons/Reddit';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import TelegramIcon from '@material-ui/icons/Telegram';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { useLocation } from 'react-router-dom';
-import { FacebookShareButton, TwitterShareButton } from "react-share";
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    RedditShareButton,
+    LinkedinShareButton,
+    WhatsappShareButton,
+    TelegramShareButton
+} from "react-share";
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
     menu: {
@@ -45,33 +56,61 @@ export default function SharesMenu() {
             >
                 <MenuItem onClick={handleClose}>
                     <CopyToClipboard text={currentUrl} onCopy={() => setTooltipOpen(true)}>
-                        <div>
+                        <Button style={{ width: "100%", height: "100%" }}>
                             <FileCopyIcon />
                             <Typography variant="caption">
-                                URLのコピー
+                                COPY URL
                         </Typography>
-                        </div>
+                        </Button>
                     </CopyToClipboard>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                    <TwitterShareButton url={currentUrl} >
-                        <div>
-                            <TwitterIcon />
-                            <Typography variant="caption">
-                                Twitter
+                    <TwitterShareButton url={currentUrl} style={{ width: "100%", height: "100%" }}>
+                        <TwitterIcon />
+                        <Typography variant="caption">
+                            Twitter
                         </Typography>
-                        </div>
                     </TwitterShareButton>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                    <FacebookShareButton url={currentUrl} >
-                        <div>
-                            <FacebookIcon />
-                            <Typography variant="caption">
-                                Facebook
+                    <FacebookShareButton url={currentUrl} style={{ width: "100%", height: "100%" }}>
+                        <FacebookIcon />
+                        <Typography variant="caption">
+                            Facebook
                         </Typography>
-                        </div>
                     </FacebookShareButton>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <RedditShareButton url={currentUrl} style={{ width: "100%", height: "100%" }}>
+                        <RedditIcon />
+                        <Typography variant="caption">
+                            Reddit
+                        </Typography>
+                    </RedditShareButton>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <LinkedinShareButton url={currentUrl} style={{ width: "100%", height: "100%" }}>
+                        <LinkedInIcon />
+                        <Typography variant="caption">
+                            LinkedIn
+                        </Typography>
+                    </LinkedinShareButton>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <WhatsappShareButton url={currentUrl} style={{ width: "100%", height: "100%" }}>
+                        <WhatsAppIcon />
+                        <Typography variant="caption">
+                            WhatsApp
+                        </Typography>
+                    </WhatsappShareButton>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <TelegramShareButton url={currentUrl} style={{ width: "100%", height: "100%" }}>
+                        <TelegramIcon />
+                        <Typography variant="caption">
+                            Telegram
+                        </Typography>
+                    </TelegramShareButton>
                 </MenuItem>
             </Menu>
             <Snackbar

@@ -4,6 +4,13 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from "react-router-dom";
 import 'normalize.css'
+import LogRocket from 'logrocket'
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-166029568-01');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
+LogRocket.init('personal-5lork/liveslives')
 
 ReactDOM.render(
   <React.StrictMode>

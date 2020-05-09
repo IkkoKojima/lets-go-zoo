@@ -13,7 +13,7 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
 
 export default function BgmMenu() {
     const classes = useStyle()
-    const [bgmId, setBgmId] = useState("isMmbbVuyQs")
+    const [bgmId, setBgmId] = useState("b-vxJT1EsfI")
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -67,12 +67,6 @@ export default function BgmMenu() {
                         <Typography variant="caption">雨の夜に読書</Typography>
                     </div>
                 </MenuItem>
-                <MenuItem onClick={() => handleClickItem("b-vxJT1EsfI")}>
-                    <div>
-                        <MusicNoteIcon />
-                        <Typography variant="caption">夜の砂浜でピアノ</Typography>
-                    </div>
-                </MenuItem>
                 <MenuItem onClick={() => handleClickItem("qIMDHSLLKVE")}>
                     <div>
                         <MusicNoteIcon />
@@ -85,7 +79,12 @@ export default function BgmMenu() {
                         <Typography variant="caption">海の見えるカフェで勉強</Typography>
                     </div>
                 </MenuItem>
-
+                <MenuItem onClick={() => handleClickItem("b-vxJT1EsfI")}>
+                    <div>
+                        <MusicNoteIcon />
+                        <Typography variant="caption">夜の砂浜でピアノ</Typography>
+                    </div>
+                </MenuItem>
             </Menu>
         </div>
     )
