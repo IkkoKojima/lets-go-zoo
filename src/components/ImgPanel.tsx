@@ -13,8 +13,8 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
         width: "100%",
         paddingBottom: "100%",
         backgroundSize: "cover",
-        borderRadius: "20%",
-        boxShadow: "3px 3px 3px 3px rgba(0,0,0,0.5) inset"
+        borderRadius: "100%",
+        boxShadow: "3px 3px 3px rgba(0,0,0,0.5)"
     }
 }))
 
