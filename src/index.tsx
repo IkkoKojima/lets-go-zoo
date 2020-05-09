@@ -2,35 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import Lives from './components/Lives';
-import Header from './components/Header'
+import { BrowserRouter } from "react-router-dom";
 import 'normalize.css'
-import Background from './components/Background';
-import CourceChoice from './components/CourceChoice';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Background>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <App />
-          </Route>
-          <Route path="/lives">
-            <Lives />
-          </Route>
-          <Route path="/rescue">
-            <CourceChoice />
-          </Route>
-        </Switch>
-      </Background>
-    </Router>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
