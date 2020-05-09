@@ -4,29 +4,30 @@ import { fetchAll } from '../repositories/fromJson'
 import { makeStyles, Theme, createStyles } from '@material-ui/core';
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import ReactPlayer from 'react-player'
 import Player from './Player';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
-    carouselItem: {
+    carouselContent: {
+        display: "block",
+        height: 0,
         width: "calc(100vw / 7)",
-        height: "15vh",
-        [theme.breakpoints.down('xs')]: {
-            height: "50px",
-        },
-        objectFit: "cover",
-        borderRadius: "10px",
+        paddingBottom: "100%",
+        backgroundSize: "cover",
+        borderRadius: "100%",
+        boxShadow: "3px 3px 3px rgba(0,0,0,0.5)",
     },
     carousel: {
         backgroundColor: "rgba(0,0,0,0.5)",
-        padding: "10px 0px 0px"
+        position: "fixed",
+        width: "100vw",
+        bottom: 0
     }
 }))
 
 export default function Lives() {
     const [activeIndex, setActiveIndex] = useState(0)
     const classes = useStyle()
-    let { path, url } = useRouteMatch()
+    let { path } = useRouteMatch()
     let history = useHistory()
     const exhibits = fetchAll()
     const handleChange = (value: number) => {
@@ -43,7 +44,6 @@ export default function Lives() {
                     <Player />
                 </Route>
             </Switch>
-            <ReactPlayer loop playing url={`https://www.youtube.com/watch?v=b-vxJT1EsfI`} width="0" height="0" />
             <div className={classes.carousel}>
                 <Carousel
                     slidesPerPage={5}
@@ -57,7 +57,9 @@ export default function Lives() {
                 >
                     {exhibits.map(exhibit => {
                         return (
-                            <img className={classes.carouselItem} src={exhibit.face} alt={exhibit.id} />
+                            <div >
+                                <span className={classes.carouselContent} style={{ backgroundImage: `url(${exhibit.face})` }} />
+                            </div>
                         )
                     })}
                 </Carousel>
