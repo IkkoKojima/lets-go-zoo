@@ -3,6 +3,7 @@ import { makeStyles, Theme, createStyles, Grid, Typography } from '@material-ui/
 import { useParams } from 'react-router-dom';
 import { Exhibit } from '../domains/Exhibit';
 import { Tip } from '../domains/Tip';
+import AboutMe from './AboutMe';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
     wrapper: {
@@ -30,26 +31,29 @@ export default function Details(props: Props) {
     let { liveId } = useParams()
     const tips: Tip[] = props.exhibits.find(e => e.id === liveId)!.tips
     return (
-        <Grid
-            container
-            direction="column"
-            justify="center"
-            alignItems="center"
-            className={classes.wrapper}
-            spacing={2}
-        >
-            {tips.map(tip => {
-                return (
-                    <Grid item container justify="flex-start" alignItems="center" key={tip.img_url} >
-                        <Grid item xs={4}>
-                            <img className={classes.img} src={tip.img_url} alt="describe" />
+        <div>
+            <Grid
+                container
+                direction="column"
+                justify="center"
+                alignItems="center"
+                className={classes.wrapper}
+                spacing={2}
+            >
+                {tips.map(tip => {
+                    return (
+                        <Grid item container justify="flex-start" alignItems="center" key={tip.img_url} >
+                            <Grid item xs={4}>
+                                <img className={classes.img} src={tip.img_url} alt="describe" />
+                            </Grid>
+                            <Grid item xs={8}>
+                                <Typography className={classes.text} variant="body2">{tip.text}</Typography>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={8}>
-                            <Typography className={classes.text} variant="body2">{tip.text}</Typography>
-                        </Grid>
-                    </Grid>
-                )
-            })}
-        </Grid>
+                    )
+                })}
+            </Grid >
+            <AboutMe />
+        </div>
     )
 }

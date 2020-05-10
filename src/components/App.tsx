@@ -6,6 +6,7 @@ import { makeStyles, Theme, createStyles, Modal, Typography, Grid } from '@mater
 import ParticleBG from './ParticleBG';
 import cover from '../imgs/cover.png'
 import TouchAppIcon from '@material-ui/icons/TouchApp';
+import AboutMe from './AboutMe';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
   div: {
@@ -61,6 +62,9 @@ function App() {
       <Switch>
         <Route path="/lives">
           <Lives />
+        </Route>
+        <Route path="/rescue">
+          <AboutMe />
         </Route>
         <Route path="/">
           <Redirect to="/lives/4b924c5a-9f1b-446b-bb5d-e10aac7d26c7" />
