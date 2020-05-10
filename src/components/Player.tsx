@@ -28,7 +28,6 @@ export default function Player(props: Props) {
                 meta={[
                     { property: 'og:type', content: 'article' },
                     { property: 'og:url', content: currentUrl },
-                    { property: 'og:image', content: `https://img.youtube.com/vi/${liveId}/maxres2.jpg` },
                 ]}
             />
             <ReactPlayer
