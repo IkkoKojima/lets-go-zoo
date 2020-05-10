@@ -35,9 +35,9 @@ function App() {
   return (
     <div className={classes.div}>
       <Menus setBgmId={setBgmId} bgmId={bgmId} />
-      <Modal open={bgmId === null} onClick={() => setBgmId("isMmbbVuyQs")} className={classes.concent} >
+      <Modal open={bgmId === null} onClick={() => setBgmId("sx3e2aWnCMQ")} className={classes.concent} >
         <div style={{ width: "100%", height: "100%" }}>
-          <Grid container direction="column" alignItems="center" justify="center" spacing={1} style={{ width: "100%", height: "100%" }} onClick={() => setBgmId("isMmbbVuyQs")}>
+          <Grid container direction="column" alignItems="center" justify="center" spacing={1} style={{ width: "100%", height: "100%" }} onClick={() => setBgmId("sx3e2aWnCMQ")}>
             <Grid item>
               <div className={classes.dummyPlayer} />
             </Grid>
