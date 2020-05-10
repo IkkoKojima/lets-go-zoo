@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Menu, MenuItem, makeStyles, Theme, createStyles, Fab, Typography } from '@material-ui/core';
 import ReactPlayer from 'react-player';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
@@ -11,9 +11,13 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
     },
 }))
 
-export default function BgmMenu() {
+type Props = {
+    bgmId: null | string
+    setBgmId: (id: string) => void
+}
+
+export default function BgmMenu(props: Props) {
     const classes = useStyle()
-    const [bgmId, setBgmId] = useState("b-vxJT1EsfI")
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -24,12 +28,12 @@ export default function BgmMenu() {
         setAnchorEl(null);
     };
     const handleClickItem = (id: string) => {
-        setBgmId(id)
+        props.setBgmId(id)
         handleClose()
     }
     return (
         <div>
-            <ReactPlayer loop playing url={`https://www.youtube.com/watch?v=${bgmId}`} width="0" height="0" />
+            <ReactPlayer loop playing url={`https://www.youtube.com/watch?v=${props.bgmId}`} width="0" height="0" />
             <Fab onClick={handleClick} className={classes.menu}><MusicNoteIcon /></Fab>
             <Menu
                 keepMounted

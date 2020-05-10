@@ -8,15 +8,20 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
         position: "fixed",
         bottom: "30px",
         right: "20px",
-        zIndex: 2,
+        zIndex: 2
     },
 }))
 
-export default function Menus() {
+type Props = {
+    setBgmId: (id: string) => void
+    bgmId: null | string
+}
+
+export default function Menus(props: Props) {
     const classes = useStyle()
     return (
         <div className={classes.menu}>
-            <BgmMenu />
+            <BgmMenu setBgmId={props.setBgmId} bgmId={props.bgmId} />
             <br />
             <SharesMenu />
         </div>
