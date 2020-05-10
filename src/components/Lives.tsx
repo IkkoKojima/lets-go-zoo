@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { useRouteMatch, Switch, Route, useHistory } from 'react-router-dom';
 import { fetchAll } from '../repositories/fromJson'
-import { makeStyles, Theme, createStyles, Typography, Fab } from '@material-ui/core';
+import { makeStyles, Theme, createStyles, Typography, Fab, Grid } from '@material-ui/core';
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import Player from './Player';
 import Details from './Details';
-import cover from '../imgs/cover.png'
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
-import ShareIcon from '@material-ui/icons/Share';
 
 const useStyle = makeStyles((theme: Theme) => createStyles({
     carouselContent: {
@@ -17,8 +15,8 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
         width: "calc(100vw / 7)",
         paddingBottom: "100%",
         backgroundSize: "cover",
-        borderRadius: "100%",
-        boxShadow: "3px 3px 3px rgba(0,0,0,0.5)",
+        borderRadius: "10%",
+        boxShadow: "3px 3px 3px rgba(0,0,0,0.5) inset",
     },
     carousel: {
         padding: "20px 0 0"
@@ -27,16 +25,15 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
         width: "100vw",
         height: "calc(100vw * 0.5625)",
         maxHeight: "71vh",
+        [theme.breakpoints.up('lg')]: {
+            maxHeight: "40vh",
+        },
         outline: "3px dashed white",
         outlineOffset: "-20px",
-        backgroundImage: `url(${cover})`,
-        backgroundSize: "contain",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center"
     },
     describe: {
         color: "white",
-
+        width: "100%", height: "100%"
     },
     bgmFab: {
         backgroundColor: "rgba(245,123,81,0.8)",
@@ -63,10 +60,11 @@ export default function Lives() {
             <div className={classes.carousel}>
                 <Carousel
                     slidesPerPage={5}
-                    slidesPerScroll={3}
+                    slidesPerScroll={1}
                     clickToChange
                     arrows
                     dots
+                    draggable
                     centered
                     value={activeIndex}
                     onChange={handleChange}
@@ -86,23 +84,18 @@ export default function Lives() {
         <div >
             <Switch>
                 <Route exact path={path}>
-                    <div className={classes.dummyPlayer}></div>
-                    {carousel()}
-                    <div className={classes.describe}>
-                        <Typography variant="h5" align="center">
-                            すいそうを1つ選んでみよう
+                    <div className={classes.dummyPlayer}>
+                        <Grid container direction="column" justify="center" alignItems="center" className={classes.describe}>
+                            <Grid item>
+                                <Typography variant="h5">すいそう をクリックしよう</Typography>
+                            </Grid>
                             <br />
-                            <br />
-                            <br />
-                            {<Fab size="small" className={classes.bgmFab}><MusicNoteIcon /></Fab>}で音楽をへんこうできるよ
-                            <br />
-                            <br />
-                            <br />
-                            よかったらシェア
-                            <Fab size="small" className={classes.shareFab}><ShareIcon /></Fab>
-                            してね
-                    </Typography>
+                            <Grid item>
+                                <Typography variant="body1">音楽は{<Fab size="small" className={classes.bgmFab}><MusicNoteIcon /></Fab>}でへんこうできるよ</Typography>
+                            </Grid>
+                        </Grid>
                     </div>
+                    {carousel()}
                 </Route>
                 <Route path={`${path}/:liveId`}>
                     <Player exhibits={exhibits} />

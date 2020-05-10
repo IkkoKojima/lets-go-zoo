@@ -12,6 +12,13 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 
 LogRocket.init('personal-5lork/liveslives')
 
+LogRocket.getSessionURL(function (sessionURL) {
+  ReactGA.event({
+    category: 'LogRocket',
+    action: sessionURL
+  })
+});
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
