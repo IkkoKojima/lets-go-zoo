@@ -10,6 +10,7 @@ export class Exhibit {
         this.id = id;
         this.video = video;
         this.tips = tips;
-        this.face = `https://img.youtube.com/vi/${video.id}/maxres2.jpg`
+        // this.face = `https://img.youtube.com/vi/${video.id}/maxres1.jpg`
+        this.face = tips[0].img_url
     }
 }

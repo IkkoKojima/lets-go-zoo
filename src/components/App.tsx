@@ -63,7 +63,7 @@ function App() {
           <Lives />
         </Route>
         <Route path="/">
-          <Redirect to="/lives/fe5a775b-3d87-400f-87ae-dd33faa8b480" />
+          <Redirect to="/lives/4b924c5a-9f1b-446b-bb5d-e10aac7d26c7" />
         </Route>
       </Switch>
       <ParticleBG />

@@ -46,7 +46,7 @@ const useStyle = makeStyles((theme: Theme) => createStyles({
 }))
 
 export default function Lives() {
-    const [activeIndex, setActiveIndex] = useState(4)
+    const [activeIndex, setActiveIndex] = useState(7)
     const classes = useStyle()
     let { path } = useRouteMatch()
     let history = useHistory()
