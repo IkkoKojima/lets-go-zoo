@@ -33,7 +33,7 @@ export default function BgmMenu(props: Props) {
     }
     return (
         <div>
-            <ReactPlayer loop playing url={`https://www.youtube.com/watch?v=${props.bgmId}`} width="0" height="0" />
+            <ReactPlayer playsinline loop playing url={`https://www.youtube.com/watch?v=${props.bgmId}`} width="0" height="0" />
             <Fab onClick={handleClick} className={classes.menu}><MusicNoteIcon /></Fab>
             <Menu
                 keepMounted

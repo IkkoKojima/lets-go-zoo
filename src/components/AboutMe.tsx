@@ -136,7 +136,7 @@ export default function AboutMe() {
                                 height: "15vh",
                                 color: "white",
                                 outline: "5px double white",
-                                outlineOffset: "-20px"
+                                outlineOffset: "-10px"
                             }}
                             variant="outlined"
                             onClick={handleClick5482}
@@ -158,7 +158,7 @@ export default function AboutMe() {
                                 height: "10vh",
                                 color: "white",
                                 outline: "5px double white",
-                                outlineOffset: "-15px"
+                                outlineOffset: "-10px"
                             }}
                             variant="outlined"
                             onClick={handleClick843}

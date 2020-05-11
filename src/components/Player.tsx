@@ -35,6 +35,7 @@ export default function Player(props: Props) {
                 pip
                 loop
                 playing
+                playsinline
                 url={`https://www.youtube.com/watch?v=${video_id}`}
                 width="100%"
                 height="100%"
