@@ -98,7 +98,7 @@ export default function AboutMe() {
                 </Grid>
                 <br />
                 <br />
-                <Grid item >
+                {/* <Grid item >
                     <Typography variant="body2" >
                         現在私は、コロナショックを受けた水族館と生き物たちの力になるためのプロジェクトを進行中です。
                     </Typography>
@@ -203,7 +203,7 @@ export default function AboutMe() {
                     </Link>
                 </Grid>
                 <br />
-                <br />
+                        <br />*/}
             </Grid>
             <Snackbar
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'right', }}
